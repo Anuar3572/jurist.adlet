@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>jurist.adlet — Юридическая помощь в Казахстане</title>
   <style>
-    /* Подключение локальных шрифтов */
     @font-face {
       font-family: 'Inter';
       font-style: normal;
@@ -90,7 +89,6 @@
       width: 100%;
     }
 
-    /* Анимации */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -164,7 +162,6 @@
       animation: float 3s ease-in-out infinite;
     }
 
-    /* Стили для элементов, которые появятся при скролле */
     .scroll-animate {
       opacity: 0;
       transform: translateY(30px);
@@ -176,7 +173,6 @@
       transform: translateY(0);
     }
 
-    /* Header */
     header {
       background-color: var(--primary);
       color: white;
@@ -299,7 +295,6 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
 
-    /* Hero Section */
     .hero {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
       color: white;
@@ -458,7 +453,6 @@
       animation: float 6s ease-in-out infinite;
     }
 
-    /* Services Section */
     .services {
       padding: 80px 0;
       background-color: var(--background-alt);
@@ -518,7 +512,6 @@
       font-weight: bold;
     }
 
-    /* About Section */
     .about {
       padding: 80px 0;
       width: 100%;
@@ -559,7 +552,6 @@
       color: var(--text-light);
     }
 
-    /* Reviews Section - Карусель */
     .reviews {
       padding: 80px 0;
       background-color: var(--background-alt);
@@ -573,7 +565,6 @@
       overflow: hidden;
       border-radius: var(--radius);
       width: 100%;
-      /* Улучшенная поддержка touch для iOS */
       -webkit-overflow-scrolling: touch;
     }
 
@@ -604,7 +595,6 @@
       max-width: 100%;
     }
 
-    /* Специальные стили для случаев с малым количеством отзывов */
     .reviews-carousel.single-item .review-image {
       flex: 0 1 auto;
       min-width: 300px;
@@ -688,7 +678,6 @@
       background: var(--primary);
     }
 
-    /* Modal для увеличения фото */
     .modal {
       display: none;
       position: fixed;
@@ -731,7 +720,6 @@
       to { opacity: 1; }
     }
 
-    /* Footer */
     footer {
       background-color: var(--primary);
       color: white;
@@ -805,7 +793,6 @@
       font-size: 14px;
     }
 
-    /* Responsive */
     @media (max-width: 992px) {
       .hero-container,
       .about-container {
@@ -855,7 +842,6 @@
         height: 300px;
       }
       
-      /* На планшетах убираем специальные классы */
       .reviews-carousel.single-item .review-image,
       .reviews-carousel.few-items .review-image {
         flex: 1;
@@ -931,7 +917,7 @@
         width: 40px;
         height: 40px;
         font-size: 16px;
-        display: none; /* Скрываем стрелки на мобильных */
+        display: none; 
       }
       
       .carousel-btn-prev {
@@ -942,7 +928,6 @@
         right: 10px;
       }
       
-      /* На мобильных - 1 отзыв на слайд */
       .carousel-slide {
         gap: 10px;
       }
@@ -953,12 +938,10 @@
         flex: 0 0 100%;
       }
 
-      /* Показываем точки на мобильных */
       .carousel-dots {
         display: flex;
       }
       
-      /* На мобильных убираем специальные классы */
       .reviews-carousel.single-item .review-image,
       .reviews-carousel.few-items .review-image {
         flex: 0 0 100%;
@@ -1060,7 +1043,6 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-container">
       <div class="hero-content">
@@ -1078,7 +1060,6 @@
             </a>
           </div>
           
-          <!-- Кнопки звонка -->
           <div class="button-row">
             <a class="btn btn-secondary" href="tel:+77471135926">
               📞 Позвонить: +7 747 113 5926
@@ -1110,7 +1091,6 @@
     </div>
   </section>
 
-  <!-- Services Section -->
   <section class="services" id="services">
     <div class="container">
       <h2 class="section-title scroll-animate">Услуги</h2>
@@ -1165,7 +1145,6 @@
     </div>
   </section>
 
-  <!-- About Section -->
   <section class="about" id="about">
     <div class="container about-container">
       <div class="about-image scroll-animate">
@@ -1189,7 +1168,6 @@
     </div>
   </section>
 
-  <!-- Reviews Section - Карусель -->
   <section class="reviews" id="reviews">
     <div class="container">
       <h2 class="section-title scroll-animate">Отзывы клиентов</h2>
@@ -1208,13 +1186,11 @@
     </div>
   </section>
 
-  <!-- Modal для увеличения фото -->
   <div id="imageModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modalImage">
   </div>
 
-  <!-- Footer -->
   <footer id="contacts">
     <div class="container">
       <div class="footer-container">
@@ -1250,19 +1226,15 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // РУЧНОЙ СПИСОК ОТЗЫВОВ - редактируйте здесь при добавлении новых отзывов
+    // РУЧНОЙ СПИСОК ОТЗЫВОВ
     const reviews = [
       'otz/review1.jpg',
       'otz/review2.jpg', 
       'otz/review3.jpg',
       'otz/review4.jpg',
-      'otz/review5.jpg',
-      'otz/review6.jpg'
-      // Добавляйте сюда новые отзывы вручную, когда добавляете файлы в папку otz
-      // Например: 'otz/review7.jpg', 'otz/review8.jpg' и т.д.
+      'otz/review5.jpg'
     ];
 
-    // Карусель отзывов
     const carouselContainer = document.getElementById('carouselContainer');
     const carouselDots = document.getElementById('carouselDots');
     const prevBtn = document.getElementById('prevBtn');
@@ -1276,7 +1248,6 @@
     let currentX = 0;
     let isDragging = false;
 
-    // Функция для определения количества элементов на слайд в зависимости от ширины экрана
     function getItemsPerSlide() {
       if (window.innerWidth < 768) {
         return 1; // На мобильных - 1 отзыв на слайд
@@ -1287,22 +1258,18 @@
       }
     }
 
-    // Создаем слайды
     function createSlides() {
       carouselContainer.innerHTML = '';
       carouselDots.innerHTML = '';
       
-      // Обновляем количество элементов на слайд
       itemsPerSlide = getItemsPerSlide();
       totalSlides = Math.ceil(reviews.length / itemsPerSlide);
       
-      // Скрываем карусель, если нет отзывов
       if (reviews.length === 0) {
         document.querySelector('.reviews-carousel').style.display = 'none';
         return;
       }
       
-      // Добавляем специальные классы для случаев с малым количеством отзывов
       if (reviews.length === 1) {
         reviewsCarousel.classList.add('single-item');
         reviewsCarousel.classList.remove('few-items');
@@ -1313,7 +1280,6 @@
         reviewsCarousel.classList.remove('single-item', 'few-items');
       }
       
-      // Создаем точки для навигации
       for (let i = 0; i < totalSlides; i++) {
         const dot = document.createElement('span');
         dot.className = `carousel-dot ${i === 0 ? 'active' : ''}`;
@@ -1325,12 +1291,10 @@
         carouselDots.appendChild(dot);
       }
       
-      // Создаем слайды
       for (let i = 0; i < totalSlides; i++) {
         const slide = document.createElement('div');
         slide.className = 'carousel-slide';
         
-        // Добавляем изображения в слайд
         const startIndex = i * itemsPerSlide;
         const endIndex = Math.min(startIndex + itemsPerSlide, reviews.length);
         
@@ -1343,7 +1307,6 @@
           img.alt = `Отзыв клиента ${j + 1}`;
           img.addEventListener('click', () => openModal(reviews[j]));
           
-          // Проверяем, загружается ли изображение (чтобы не показывать битые)
           img.onerror = function() {
             console.log(`Изображение не найдено: ${reviews[j]}`);
             reviewDiv.style.display = 'none';
@@ -1356,7 +1319,6 @@
         carouselContainer.appendChild(slide);
       }
       
-      // Обновляем видимость кнопок после создания слайдов
       updateCarousel();
     }
 
@@ -1370,17 +1332,14 @@
       
       carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
       
-      // Обновляем активную точку
       document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
         dot.classList.toggle('active', index === currentSlide);
       });
       
-      // Скрываем/показываем кнопки если это первый/последний слайд
       prevBtn.style.display = currentSlide === 0 ? 'none' : 'flex';
       nextBtn.style.display = currentSlide === totalSlides - 1 ? 'none' : 'flex';
     }
 
-    // Обработчики для кнопок
     nextBtn.addEventListener('click', () => {
       if (currentSlide < totalSlides - 1) {
         currentSlide++;
@@ -1395,31 +1354,25 @@
       }
     });
 
-    // УНИВЕРСАЛЬНЫЕ ФУНКЦИИ ДЛЯ СВАЙПА (работают на iOS и Android)
     function handleDragStart(e) {
-      // Для touch событий
       if (e.type === 'touchstart') {
         startX = e.touches[0].clientX;
       } 
-      // Для mouse событий (на всякий случай)
       else if (e.type === 'mousedown') {
         startX = e.clientX;
         e.preventDefault();
       }
       isDragging = true;
       
-      // Добавляем класс для улучшенной производительности на iOS
       carouselContainer.style.transition = 'none';
     }
 
     function handleDragMove(e) {
       if (!isDragging) return;
       
-      // Для touch событий
       if (e.type === 'touchmove') {
         currentX = e.touches[0].clientX;
       } 
-      // Для mouse событий
       else if (e.type === 'mousemove') {
         currentX = e.clientX;
       }
@@ -1429,22 +1382,19 @@
       if (!isDragging) return;
       isDragging = false;
       
-      // Восстанавливаем transition
       carouselContainer.style.transition = 'transform 0.5s ease';
       
       if (!startX || !currentX) return;
       
       const diff = startX - currentX;
-      const minSwipeDistance = 50; // Минимальное расстояние для свайпа
+      const minSwipeDistance = 50; 
       
       if (Math.abs(diff) > minSwipeDistance) {
         if (diff > 0) {
-          // Свайп влево - следующий слайд
           if (currentSlide < totalSlides - 1) {
             currentSlide++;
           }
         } else {
-          // Свайп вправо - предыдущий слайд
           if (currentSlide > 0) {
             currentSlide--;
           }
@@ -1452,12 +1402,10 @@
         updateCarousel();
       }
       
-      // Сбрасываем значения
       startX = 0;
       currentX = 0;
     }
 
-    // Modal для увеличения фото
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
     const closeBtn = document.querySelector('.close');
@@ -1477,7 +1425,6 @@
       }
     });
 
-    // Анимации при скролле
     function initScrollAnimations() {
       const animatedElements = document.querySelectorAll('.scroll-animate');
       
@@ -1497,34 +1444,29 @@
       });
     }
 
-    // Пересоздание карусели при изменении размера окна
     function handleResize() {
       createSlides();
     }
 
-    // Инициализация
     document.addEventListener('DOMContentLoaded', function() {
       createSlides();
       initScrollAnimations();
       window.addEventListener('resize', handleResize);
       
-      // УНИВЕРСАЛЬНЫЕ ОБРАБОТЧИКИ ДЛЯ ВСЕХ УСТРОЙСТВ
       const carousel = document.querySelector('.reviews-carousel');
       
-      // Touch события (для мобильных устройств)
       carousel.addEventListener('touchstart', handleDragStart, { passive: true });
       carousel.addEventListener('touchmove', handleDragMove, { passive: true });
       carousel.addEventListener('touchend', handleDragEnd, { passive: true });
       
-      // Mouse события (для десктопов и на всякий случай)
       carousel.addEventListener('mousedown', handleDragStart);
       carousel.addEventListener('mousemove', handleDragMove);
       carousel.addEventListener('mouseup', handleDragEnd);
       carousel.addEventListener('mouseleave', handleDragEnd);
       
-      // Предотвращаем выделение текста при перетаскивании
       carousel.addEventListener('dragstart', (e) => e.preventDefault());
     });
   </script>
 </body>
+
 </html>
